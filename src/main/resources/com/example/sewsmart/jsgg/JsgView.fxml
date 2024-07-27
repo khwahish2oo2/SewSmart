@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="566.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sewsmart.jsg.JsgController">
+   <children>
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffaeb" height="566.0" stroke="BLACK" strokeType="INSIDE" width="654.0" />
+       <TableView fx:id="workload" layoutX="25.0" layoutY="40.0" prefHeight="266.0" prefWidth="279.0" style="-fx-border-color: #387666;">
+           <columns>
+               <TableColumn fx:id="workerName" prefWidth="97.60003662109375" style=" -fx-text-fill: #387666; -fx-font-weight: bold;" text="Worker Name" />
+               <TableColumn fx:id="workLoad" prefWidth="88.0" style="-fx-alignment: CENTER; -fx-text-fill: #bf7144; -fx-font-weight: bold;" text="WorkLoad" />
+               <TableColumn fx:id="status" prefWidth="72.00007629394531" style="-fx-text-fill: #387666; -fx-font-weight: bold;" text="Status" />
+           </columns>
+       </TableView>
+
+       <TableView fx:id="tblorder" layoutX="25.0" layoutY="321.0" prefHeight="214.0" prefWidth="597.0" style="-fx-border-color: #387666;">
+           <columns>
+               <TableColumn fx:id="oidd" prefWidth="72.7999267578125" style="-fx-alignment: CENTER-RIGHT; -fx-text-fill: #387666; -fx-font-weight: bold;" text="Order ID" />
+               <TableColumn fx:id="dresss" prefWidth="100.00006103515625" style="-fx-alignment: CENTER-LEFT; -fx-text-fill: #bf7144; -fx-font-weight: bold;" text="Dress" />
+               <TableColumn fx:id="wrkrr" prefWidth="108.800048828125" style="-fx-alignment: CENTER-LEFT; -fx-text-fill: #bf7144; -fx-font-weight: bold;" text="Assignee" />
+               <TableColumn fx:id="dodd" prefWidth="106.39996337890625" style="-fx-alignment: CENTER-LEFT; -fx-text-fill: #bf7144; -fx-font-weight: bold;" text="Date of Delivery" />
+               <TableColumn fx:id="statuss" prefWidth="99.20001220703125" style="-fx-alignment: CENTER-LEFT; -fx-text-fill: #387666; -fx-font-weight: bold;" text="Status" />
+               <TableColumn fx:id="btnn" prefWidth="88.5" style=" -fx-text-fill: #bf7144; -fx-font-weight: bold;" text="Actions" />
+           </columns>
+       </TableView>
+
+       <ImageView fitHeight="306.0" fitWidth="306.0" layoutX="317.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pngtree-ganesh-chaturthi-vinayaka-lord-ganesha-png-image_11581364.png" />
+         </image>
+       </ImageView>
+   </children>
+</AnchorPane>

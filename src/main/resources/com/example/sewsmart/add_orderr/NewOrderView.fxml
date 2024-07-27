@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="431.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sewsmart.add_order.NewOrderController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffaeb" height="431.0" stroke="BLACK" strokeType="INSIDE" width="654.0" />
+      <TextField fx:id="mobile" layoutX="447.0" layoutY="18.0" prefHeight="26.0" prefWidth="121.0" visible="false" />
+      <Label layoutX="81.0" layoutY="49.0" text="Dress Type" textFill="#bf843c">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="dress" layoutX="81.0" layoutY="67.0" onAction="#dofillworkercombo" prefHeight="26.0" prefWidth="190.0" style="-fx-border-color: #bf843c; -fx-background-color: #ffeec1;" />
+      <ImageView fx:id="designPrev" fitHeight="121.0" fitWidth="127.0" layoutX="447.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <Blend />
+         </effect>
+         <image>
+            <Image url="@upload3.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="446.0" layoutY="200.0" mnemonicParsing="false" onAction="#doUploadPic" style="-fx-background-color: #ffeec1; -fx-border-color: grey;" text="Add Sample Design" />
+      <Label layoutX="290.0" layoutY="50.0" text="Quantity" textFill="#bf843c">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="qty" editable="true" layoutX="290.0" layoutY="68.0" prefHeight="26.0" prefWidth="138.0" style="-fx-border-color: #bf843c;" />
+      <Label layoutX="81.0" layoutY="103.0" text="Date of Delivery" textFill="#bf843c">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dod" layoutX="81.0" layoutY="121.0" prefHeight="26.0" prefWidth="190.0" style="-fx-border-color: #bf843c;" />
+      <Label layoutX="292.0" layoutY="104.0" text="Cost of Stitching" textFill="#bf843c">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cost" layoutX="292.0" layoutY="122.0" prefHeight="26.0" prefWidth="138.0" style="-fx-border-color: #bf843c;" />
+      <Label layoutX="448.0" layoutY="50.0" text="Design Reference" textFill="#bf843c">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="158.0" text="Assigned Worker" textFill="#bf843c">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="wrkr" layoutX="82.0" layoutY="176.0" prefHeight="26.0" prefWidth="190.0" style="-fx-border-color: #bf843c; -fx-background-color: #ffeec1;" />
+      <TextField fx:id="bill" disable="true" layoutX="292.0" layoutY="178.0" prefHeight="26.0" prefWidth="138.0" style="-fx-border-color: #bf843c;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <Label layoutX="82.0" layoutY="215.0" text="Measurements" textFill="#bf843c">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="measurements" layoutX="82.0" layoutY="234.0" prefHeight="122.0" prefWidth="190.0" style="-fx-border-color: #bf843c;" />
+      <Label layoutX="291.0" layoutY="216.0" text="Additional Information" textFill="#bf843c">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="info" layoutX="290.0" layoutY="235.0" prefHeight="121.0" prefWidth="282.0" style="-fx-border-color: #bf843c;" />
+      <Label layoutX="293.0" layoutY="156.0" onMouseClicked="#doCalcBill" style="-fx-border-color: grey; -fx-background-color: #ffeec1;" text="  Total Bill  ">
+         <font>
+            <Font name="Cambria" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="14.0" text="New Order" textFill="#387666">
+         <font>
+            <Font name="Bookman Old Style Bold" size="28.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#387666" height="34.0" layoutX="81.0" layoutY="365.0" stroke="BLACK" strokeType="INSIDE" width="82.0" />
+      <Button alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="91.0" layoutY="368.0" mnemonicParsing="false" onAction="#doSave" prefHeight="28.0" prefWidth="63.0" style="-fx-background-color: none;" text="Save" textFill="#ffeec7">
+         <font>
+            <Font name="Bookman Old Style Bold" size="15.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#387666" height="34.0" layoutX="169.0" layoutY="365.0" stroke="BLACK" strokeType="INSIDE" width="112.0" />
+      <Button alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="179.0" layoutY="368.0" mnemonicParsing="false" onAction="#doClearAll" prefHeight="28.0" prefWidth="92.0" style="-fx-background-color: none;" text="Clear All" textFill="#ffeec7">
+         <font>
+            <Font name="Bookman Old Style Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="msg" alignment="CENTER" layoutX="290.0" layoutY="369.0" prefHeight="26.0" prefWidth="282.0" textFill="#c73408">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
